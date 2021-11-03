@@ -9,6 +9,9 @@ import axios from 'axios'
 import * as string from 'ts-misc/dist/utils/string.js'
 import { is } from 'ts-misc/dist/utils/guards.js'
 
+// Modules
+import * as funcoes from './funcoes.js'
+
 /*
 ##########################################################################################################################
 #                                                     INSTANCE CLASSES                                                   #
@@ -51,7 +54,7 @@ export default class Acesso {
 
   get today() {
     const d = new Date()
-    return `${d.getDate()}-${d.getMonth() + 1}-${d.getFullYear()}`
+    return `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`
   }
 
   get connection() {
@@ -132,9 +135,11 @@ export default class Acesso {
       ] as const,
       ''
     )
+    // JSON to Hex
+    const hex = funcoes.toHex(html)
     try {
       // Request Server
-      const res = await axios.post(url, html)
+      const res = await axios.post(url, hex)
       // Check Response
       if (res.data.status === '1') {
         // Check Response

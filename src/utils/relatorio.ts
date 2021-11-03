@@ -10,6 +10,7 @@ import { is } from 'ts-misc/dist/utils/guards.js'
 
 // Modules
 import Acesso from './acesso.js'
+import * as funcoes from './funcoes.js'
 
 /*
 ##########################################################################################################################
@@ -51,8 +52,12 @@ export default class Relatorio {
       datafinal: dataFinal,
       idprocesso: idProcesso
     }
+    // JSON to Hex
+    const hex = funcoes.toHex(
+      JSON.stringify(json)
+    )
     // Request Server
-    const res = await axios.post(url, json)
+    const res = await axios.post(url, hex)
     // Return Response
     return res.data
   }
@@ -81,8 +86,12 @@ export default class Relatorio {
       data: data,
       registro: registro
     }
+    // JSON to Hex
+    const hex = funcoes.toHex(
+      JSON.stringify(json)
+    )
     // Request Server
-    const res = await axios.post(url, json)
+    const res = await axios.post(url, hex)
     // Return Response
     return res.data
   }
@@ -110,8 +119,12 @@ export default class Relatorio {
       data: data,
       idreport: idReport
     }
+    // JSON to Hex
+    const hex = funcoes.toHex(
+      JSON.stringify(json)
+    )
     // Request Server
-    const res = await axios.post(url, json)
+    const res = await axios.post(url, hex)
     // Return Response
     return res.data
   }
@@ -142,8 +155,12 @@ export default class Relatorio {
       datafinal: dataFinal,
       idreport: idReport
     }
+    // JSON to Hex
+    const hex = funcoes.toHex(
+      JSON.stringify(json)
+    )
     // Request Server
-    const res = await axios.post(url, json)
+    const res = await axios.post(url, hex)
     // Return Response
     return res.data
   }
@@ -171,8 +188,12 @@ export default class Relatorio {
       datafinal: dataFinal,
       controle: controle
     }
+    // JSON to Hex
+    const hex = funcoes.toHex(
+      JSON.stringify(json)
+    )
     // Request Server
-    const res = await axios.post(url, json)
+    const res = await axios.post(url, hex)
     // Return Response
     return res.data
   }
@@ -200,8 +221,12 @@ export default class Relatorio {
       data: data,
       idprocessogrupo: idProcessoGrupo
     }
+    // JSON to Hex
+    const hex = funcoes.toHex(
+      JSON.stringify(json)
+    )
     // Request Server
-    const res = await axios.post(url, json)
+    const res = await axios.post(url, hex)
     // Return Response
     return res.data
   }
@@ -229,8 +254,12 @@ export default class Relatorio {
       data: data,
       idprocesso: idProcesso
     }
+    // JSON to Hex
+    const hex = funcoes.toHex(
+      JSON.stringify(json)
+    )
     // Request Server
-    const res = await axios.post(url, json)
+    const res = await axios.post(url, hex)
     // Return Response
     return res.data
   }
