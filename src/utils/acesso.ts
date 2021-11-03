@@ -88,8 +88,8 @@ export default class Acesso {
         `http://homerico.com.br/linkautenticacao.asp?empresa=${key}`
       )
       // Check Response
-      if (!is.in(res.data, 'porta', 'string')) throw new Error('key "porta" not found')
-      if (!is.in(res.data, 'ip', 'string')) throw new Error('key "ip" not found')
+      if (!is.in(res.data, 'porta', 'string')) throw new Error('key "porta" not valid')
+      if (!is.in(res.data, 'ip', 'string')) throw new Error('key "ip" not valid')
       // Set Parameters
       this.configuracao.porta = res.data.porta
       this.configuracao.ip = res.data.ip
@@ -136,8 +136,8 @@ export default class Acesso {
       // Check Response
       if (res.data.status === '1') {
         // Check Response
-        if (!is.in(res.data, 'autenticacao', 'string')) throw new Error('key "autenticacao" not found')
-        if (!is.in(res.data, 'menu', 'string')) throw new Error('key "menu" not found')
+        if (!is.in(res.data, 'autenticacao', 'string')) throw new Error('key "autenticacao" not valid')
+        if (!is.in(res.data, 'menu', 'string')) throw new Error('key "menu" not valid')
         // Set Parameters
         this.configuracao.autenticacao = res.data.autenticacao
         this.configuracao.menus = res.data.menu
