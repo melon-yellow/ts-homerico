@@ -40,8 +40,8 @@ export default class Relatorio {
     // Get Parameters
     const { dataInicial, dataFinal, idProcesso } = p
     // Check Authentication
-    if (!is.string(this.acesso.autenticacao)) return 'sem acesso'
-    if (!this.acesso.menus('d1')) return 'sem acesso'
+    if (!is.string(this.acesso.autenticacao)) return 'sem autenticacao'
+    if (!this.acesso.menus('d1')) return 'sem acesso ao menu'
     // URL
     const url = `http://${this.acesso.endereco}/reports/relatoriolistas?${this.acesso.connection}`
     // Resquest JSON
@@ -74,8 +74,8 @@ export default class Relatorio {
     // Get Parameters
     const { data, registro } = p
     // Check Authentication
-    if (!is.string(this.acesso.autenticacao)) return 'sem acesso'
-    if (!this.acesso.menus('d3')) return 'sem acesso'
+    if (!is.string(this.acesso.autenticacao)) return 'sem autenticacao'
+    if (!this.acesso.menus('d3')) return 'sem acesso ao menu'
     // URL
     const connection = `autenticacao=${this.acesso.autenticacao}&numencypt=[numencypt]`
     const url = `http://${this.acesso.endereco}/reports/relatoriogerencial?${connection}`
@@ -107,8 +107,8 @@ export default class Relatorio {
     // Get Parameters
     const { data, idReport } = p
     // Check Authentication
-    if (!is.string(this.acesso.autenticacao)) return 'sem acesso'
-    if (!this.acesso.menus('d3')) return 'sem acesso'
+    if (!is.string(this.acesso.autenticacao)) return 'sem autenticacao'
+    if (!this.acesso.menus('d3')) return 'sem acesso ao menu'
     // URL
     const url = `http://${this.acesso.endereco}/reports/relatoriogerencial?${this.acesso.connection}`
     // Resquest JSON
@@ -140,8 +140,8 @@ export default class Relatorio {
     // Get Parameters
     const { dataInicial, dataFinal, idReport } = p
     // Check Authentication
-    if (!is.string(this.acesso.autenticacao)) return 'sem acesso'
-    if (!this.acesso.menus('d1')) return 'sem acesso'
+    if (!is.string(this.acesso.autenticacao)) return 'sem autenticacao'
+    if (!this.acesso.menus('d1')) return 'sem acesso ao menu'
     // URL
     const url = `http://${this.acesso.endereco}/reports/relatorioboletim?${this.acesso.connection}`
     // Resquest JSON
@@ -174,13 +174,13 @@ export default class Relatorio {
     // Get Parameters
     const { dataFinal, controle } = p
     // Check Authentication
-    if (!is.string(this.acesso.autenticacao)) return 'sem acesso'
-    if (!this.acesso.menus('pro09')) return 'sem acesso'
+    if (!is.string(this.acesso.autenticacao)) return 'sem autenticacao'
+    if (!this.acesso.menus('pro09')) return 'sem acesso ao menu'
     // URL
     const url = `http://${this.acesso.endereco}/reports/producaolistas?${this.acesso.connection}`
     // Resquest JSON
     const json = {
-      datafinal: dataFinal,
+      data: dataFinal,
       controle: controle
     }
     // JSON to Hex
@@ -206,8 +206,8 @@ export default class Relatorio {
     // Get Parameters
     const { data, idProcessoGrupo } = p
     // Check Authentication
-    if (!is.string(this.acesso.autenticacao)) return 'sem acesso'
-    if (!this.acesso.menus('pro4')) return 'sem acesso'
+    if (!is.string(this.acesso.autenticacao)) return 'sem autenticacao'
+    if (!this.acesso.menus('pro4')) return 'sem acesso ao menu'
     // URL
     const url = `http://${this.acesso.endereco}/reports/ov?${this.acesso.connection}`
     // Resquest JSON
@@ -238,8 +238,8 @@ export default class Relatorio {
     // Get Parameters
     const { data, idProcesso } = p
     // Check Authentication
-    if (!is.string(this.acesso.autenticacao)) return 'sem acesso'
-    if (!this.acesso.menus('pro2')) return 'sem acesso'
+    if (!is.string(this.acesso.autenticacao)) return 'sem autenticacao'
+    if (!this.acesso.menus('pro2')) return 'sem acesso ao menu'
     // URL
     const url = `http://${this.acesso.endereco}/reports/interrupcoes?${this.acesso.connection}`
     // Resquest JSON
