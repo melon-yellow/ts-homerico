@@ -14,6 +14,7 @@
     },
     "dependencies": {
       "axios": "^0.21.1",
+      "js-beautify": "^1.13.5",
       "ts-misc": "anthony-freitas/ts-misc",
       "tsconfig-paths": "^3.9.0",
       "typescript": "^4.1.5"
