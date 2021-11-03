@@ -68,7 +68,7 @@ export default class Acesso {
 
   menus(key: string) {
     const haystack = this.configuracao.menus.split(',')
-    return key in haystack
+    return haystack.includes(key)
   }
 
   /*
