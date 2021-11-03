@@ -134,9 +134,7 @@ export default class Acesso {
     )
     try {
       // Request Server
-      const res = await axios.post(url, html, {
-        headers: { 'Content-Type': 'text/html' }
-      })
+      const res = await axios.post(url, html)
       // Check Response
       if (res.data.status === '1') {
         // Check Response
