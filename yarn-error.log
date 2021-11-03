@@ -1,0 +1,70 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\anthony.freitas\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\anthony.freitas\AppData\Local\Microsoft\WindowsApps;C:\Users\anthony.freitas\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\anthony.freitas\AppData\Local\GitHubDesktop\bin;C:\Users\anthony.freitas\AppData\Roaming\npm;C:\Program Files (x86)\Sophos\Sophos SSL VPN Client\bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.11.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\anthony.freitas\Documents\GitHub\ts-homerico\package.json: Unexpected token / in JSON at position 387
+      at JSON.parse (<anonymous>)
+      at C:\Users\anthony.freitas\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\anthony.freitas\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\anthony.freitas\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+      "name": "ts-homerico",
+      "author": "anthony",
+      "version": "1.0.1",
+      "description": "Homerico Conexao (Decompilado)",
+      "license": "MIT",
+      "type": "module",
+      "main": "dist/index.js",
+      "scripts": {
+        "transpile": "tsc -p tsconfig.json",
+        "beautify": "js-beautify -r --editorconfig ./dist/**/*.{js,ts,tsx}",
+        "build": "yarn transpile && yarn beautify"//,
+        //"preinstall": "yarn build"
+      },
+      "dependencies": {
+        "axios": "^0.21.1",
+        "ts-misc": "anthony-freitas/ts-misc",
+        "tsconfig-paths": "^3.9.0",
+        "typescript": "^4.1.5"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.13.1",
+        "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+        "@types/express": "^4.17.11",
+        "@types/jest": "^26.0.20",
+        "@types/node-cron": "^2.0.3",
+        "@types/request-ip": "^0.0.35",
+        "@typescript-eslint/eslint-plugin": "^4.15.1",
+        "@typescript-eslint/parser": "^4.15.1",
+        "eslint": "^7.20.0",
+        "eslint-config-prettier": "^8.0.0",
+        "eslint-config-standard": "^16.0.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-promise": "^4.3.1",
+        "eslint-plugin-react": "^7.22.0"
+      },
+      "resolutions": {}
+    }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
