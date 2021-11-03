@@ -10,8 +10,7 @@ export function toHex(str: string) {
   let result: string = ''
   // Iterate over String Char
   str.split('').forEach(v => {
-    const char = v.charCodeAt(0).toString(16)
-    result += `${char.length < 2 ? '0' : ''}${char}`
+    result += v.charCodeAt(0).toString(16)
   })
   // Return Hex String
   return result
