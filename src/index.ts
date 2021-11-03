@@ -41,12 +41,12 @@ export default class HomericoConexao {
   ##########################################################################################################################
   */
 
-  get validar() {
-    return this.acesso.validar
+  get validar(): Acesso['validar'] {
+    return this.acesso.validar.bind(this.acesso)
   }
 
-  get login() {
-    return this.acesso.login
+  get login(): Acesso['login'] {
+    return this.acesso.login.bind(this.acesso)
   }
 
   /*
@@ -55,32 +55,32 @@ export default class HomericoConexao {
   ##########################################################################################################################
   */
 
-  get relatorioLista() {
-    return this.relatorio.relatorioLista
+  get relatorioLista(): Relatorio['relatorioLista'] {
+    return this.relatorio.relatorioLista.bind(this.relatorio)
   }
 
-  get relatorioGerencialRegistro() {
-    return this.relatorio.relatorioGerencialRegistro
+  get relatorioGerencialRegistro(): Relatorio['relatorioGerencialRegistro'] {
+    return this.relatorio.relatorioGerencialRegistro.bind(this.relatorio)
   }
 
-  get relatorioGerencialReport() {
-    return this.relatorio.relatorioGerencialReport
+  get relatorioGerencialReport(): Relatorio['relatorioGerencialReport'] {
+    return this.relatorio.relatorioGerencialReport.bind(this.relatorio)
   }
 
-  get relatorioBoletim() {
-    return this.relatorio.relatorioBoletim
+  get relatorioBoletim(): Relatorio['relatorioBoletim'] {
+    return this.relatorio.relatorioBoletim.bind(this.relatorio)
   }
 
-  get producaoLista() {
-    return this.relatorio.producaoLista
+  get producaoLista(): Relatorio['producaoLista'] {
+    return this.relatorio.producaoLista.bind(this.relatorio)
   }
 
-  get relatorioOv() {
-    return this.relatorio.relatorioOv
+  get relatorioOv(): Relatorio['relatorioOv'] {
+    return this.relatorio.relatorioOv.bind(this.relatorio)
   }
 
-  get relatorioInterrupcoes() {
-    return this.relatorio.relatorioInterrupcoes
+  get relatorioInterrupcoes(): Relatorio['relatorioInterrupcoes'] {
+    return this.relatorio.relatorioInterrupcoes.bind(this.relatorio)
   }
 }
 
