@@ -6,6 +6,7 @@
 
 // Imports
 import axios from 'axios'
+import * as string from 'ts-misc/dist/utils/string.js'
 import { is } from 'ts-misc/dist/utils/guards.js'
 
 /*
@@ -50,7 +51,7 @@ export default class Acesso {
 
   get today() {
     const d = new Date()
-    return `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`
+    return `${d.getDate()}-${d.getMonth() + 1}-${d.getFullYear()}`
   }
 
   get connection() {
@@ -120,18 +121,21 @@ export default class Acesso {
     // Get URL
     const url = `http://${this.endereco}/login.asp?`
     // Request XML
-    const xml = `
-      <root>
-        <data>${this.today}</data>
-        <user>${usuario}</user>
-        <password>${senha}</password>
-        <app>${'homericoDesktop'}</app>
-      </root>
-    `
+    const html = string.join(
+      [
+        '<root>',
+        `<data>${this.today}</data>`,
+        `<user>${usuario}</user>`,
+        `<password>${senha}</password>`,
+        `<app>${'homericoDesktop'}</app>`,
+        '</root>'
+      ] as const,
+      ''
+    )
     try {
       // Request Server
-      const res = await axios.post(url, xml, {
-        headers: { 'Content-Type': 'text/xml' }
+      const res = await axios.post(url, html, {
+        headers: { 'Content-Type': 'text/html' }
       })
       // Check Response
       if (res.data.status === '1') {
