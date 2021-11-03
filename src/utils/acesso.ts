@@ -120,7 +120,7 @@ export default class Acesso {
     // Get URL
     const url = `http://${this.endereco}/login.asp?`
     // Request XML
-    const html = `
+    const xml = `
       <root>
         <data>${this.today}</data>
         <user>${usuario}</user>
@@ -130,8 +130,8 @@ export default class Acesso {
     `
     try {
       // Request Server
-      const res = await axios.post(url, html, {
-        headers: { 'Content-Type': 'text/html' }
+      const res = await axios.post(url, xml, {
+        headers: { 'Content-Type': 'text/xml' }
       })
       // Check Response
       if (res.data.status === '1') {
