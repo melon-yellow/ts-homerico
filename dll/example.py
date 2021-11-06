@@ -8,7 +8,7 @@ import ctypes
 #################################################################################################################################################
 
 # Informa o caminho da dll
-fileDir = os.path.dirname(__file__)
+fileDir = os.path.dirname(os.path.abspath(__file__))
 dllPath = os.path.abspath(os.path.join(fileDir, './HomericoPython64.dll'))
 
 # Importa a dll
